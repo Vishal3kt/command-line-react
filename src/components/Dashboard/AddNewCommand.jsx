@@ -70,7 +70,7 @@ const AddNewCommand = ({
             }
 
 
-            fetch('https://commandline-45ca5-default-rtdb.firebaseio.com/commandline.json', {
+            fetch('https://command-line-22204-default-rtdb.firebaseio.com/commandline.json', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

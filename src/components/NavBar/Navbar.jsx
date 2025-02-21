@@ -11,7 +11,7 @@ const Navbar = ({ selectedTab, setSelectedTab, resData }) => {
         <div className="custom-navbar-wrapper">
             <ul key={Math.random()}>
                 {
-                    resData.map((ele) => (
+                    (resData || []).map((ele) => (
                         <li key={Math.random()} onClick={() => handleNavbarSelection(ele)} className={ele?.title === selectedTab?.title ? 'active' : ''}>
                             <div className="content-wrapper">
                                 <i className={ele.icon}></i>

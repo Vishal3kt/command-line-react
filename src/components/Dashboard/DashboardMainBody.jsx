@@ -15,7 +15,7 @@ const DashboardMainBody = () => {
 
     useEffect(() => {
         showLoader();
-        fetch('https://commandline-45ca5-default-rtdb.firebaseio.com/commandline.json').then(res => res.json()).then(data => {
+        fetch('https://command-line-22204-default-rtdb.firebaseio.com/commandline.json').then(res => res.json()).then(data => {
             setData(data || []);
             hideLoader();
         })
@@ -56,7 +56,7 @@ const DashboardMainBody = () => {
                         <button onClick={handleNewTabEntryToggle}><i className="fas fa-plus"></i>Add New Tab</button>
                     </>
                 )}
-                {enableAddNewTab && <button onClick={handleNewTabEntryToggle}><i class="fas fa-less-than"></i>Back</button>}
+                {enableAddNewTab && <button onClick={handleNewTabEntryToggle}><i className="fas fa-less-than"></i>Back</button>}
 
             </div>
             {

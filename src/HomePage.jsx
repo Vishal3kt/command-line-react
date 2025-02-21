@@ -22,7 +22,7 @@ const HomePage = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const data = await fetch('https://commandline-45ca5-default-rtdb.firebaseio.com/commandline.json');
+                const data = await fetch('https://command-line-22204-default-rtdb.firebaseio.com/commandline.json');
                 const response = await data.json();
                 setResData(response)
             } catch (error) {
@@ -33,7 +33,7 @@ const HomePage = () => {
     }, []);
 
     useEffect(() => {
-        if (resData.length > 0) {
+        if (resData && resData.length > 0) {
             const selected_tab = localStorage.getItem('selected_tab');
             if (selected_tab) {
                 const prevEle = resData.find((row) => row.id === JSON.parse(selected_tab));
